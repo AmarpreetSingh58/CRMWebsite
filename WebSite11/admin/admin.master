@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+        <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/chart.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .admin {
+        background-color:#a1f8e3;
+        padding:20px;
+        border-radius:10px;
+        border-color:#0823fc;
+        padding:10px;
+        font-family:'Engravers MT';
+        font-size:10px;
+        }
+        .tablestyle {
+            width:250px;
+        background-color:#d9fae8;
+        border-radius:10px;
+        padding:5px;
+
+        }
+        .tablestyle1 {
+        background-color:#fff;
+        padding:10px;
+        }
+        .adminregistration {
+        font-family:Forte;
+        text-decoration-color:#facd8f;
+        font-size:18px;
+        text-align:right;
+        }
+        .changepass {
+        font-family:Century;
+        font-size:18px;
+        text-align:right;
+        }
+        .auto-style1 {
+            background-color: #fff;
+            padding: 10px;
+            width: 1011px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          
+        </div>
+        <div class="navbar-collapse collapse">
+          
+        </div>
+      </div>
+    </div>
+
+
+	<div id="hello">
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-lg-8 col-lg-offset-2 centered">
+	    			<h1>Engineers Garage</h1>
+	    			<h2><b>Solution</b> to Every <b>Problem</b></h2>
+	    		</div><!-- /col-lg-8 -->
+	    	</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /hello -->
+	
+	<div id="green">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 centered">
+					<img src="assets/img/iphone.png" alt="">
+				</div>
+				
+				<div class="col-lg-7 centered">
+					<h3>WHAT WE CAN DO?</h3>
+					<p>Try and solve Every Problem. <br />Help every customer of ours. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+	<div class="admin">
+        <table>
+            <tr>
+                <td class="tablestyle">
+                    <asp:TreeView ID="TreeView1" runat="server" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
+                        <Nodes>
+                            <asp:TreeNode Text="Home" Value="Home"></asp:TreeNode>
+                            <asp:TreeNode Text="Display Query" Value="Display Query"></asp:TreeNode>
+                            <asp:TreeNode Text="Account" Value="Account">
+                                <asp:TreeNode Text="Create Account" Value="Create Account"></asp:TreeNode>
+                                <asp:TreeNode Text="Change Password" Value="Change Password"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Report" Value="Report">
+                                <asp:TreeNode Text="Pending" Value="Pending"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Log Out" Value="Log Out"></asp:TreeNode>
+                        </Nodes>
+                    </asp:TreeView>
+                </td>
+                <td class="auto-style1">
+                     <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <center><h1>WELCOME</h1><br />
+            <br />
+            <br />
+            
+
+        </center>
+        </asp:ContentPlaceHolder>
+    </div>
+                </td>
+            </tr>
+        </table>
+	</div>	
+
+
+	
+  </body>
+</html>
+
+   
+    </form>
+</body>
+</html>
